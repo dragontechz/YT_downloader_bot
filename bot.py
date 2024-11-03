@@ -21,6 +21,9 @@ def download_videos_from_youtube(url):
 
 api = open("API.txt",'r').read()
 
+if api == "paste you api key here":
+      api = str(intput("input your api key here: "))
+
 bot = telebot.TeleBot(api)
 
 @bot.message_handler(commands=['start','help'])
